@@ -1,25 +1,36 @@
-Imports System
-
 Module Program
     Sub Main(args As String())
         Dim variable As Integer
+        Dim Nombre As String
+        Dim Apellido As String
+        Dim Nombre_Completo As String
         Console.WriteLine("Menú")
+
+        Console.WriteLine("Presione 1 para Ingresar Nombre")
+        Console.WriteLine("Presione 2 para Ingresar su Apellido")
+        Console.WriteLine("Presione 3 para mostrar datos")
+        Console.WriteLine("Presione 4 para salir")
+        variable = Console.ReadLine
         Do Until variable = 4
-            Console.WriteLine("Presione 1 para Ingresar nombre")
-            Console.WriteLine("Presione 2 para Ingresar su apellido")
-            Console.WriteLine("Presione 3 para Ingresar datos")
-            Console.WriteLine("Presione 4 para salir")
-            variable = Console.ReadLine
             If variable = 1 Then
-                Console.WriteLine("Ingrese su nombre")
-            ElseIf variable = 2 Then
-                Console.WriteLine("Ingrese su apellido")
-            ElseIf variable = 3 Then
-                Console.WriteLine("Datos ingresados correctamente")
+                Console.WriteLine("Ingrese su Nombre")
+                Nombre = Console.ReadLine
+            ElseIf variable = 2Then
+            Console.WriteLine("Ingrese su Apellido")
+                Apellido = Console.ReadLine
+            ElseIf variable = 3
+            Console.WriteLine("Ingrese su Nombre")
+                Nombre = Console.ReadLine
+                Console.WriteLine("Ingrese su Apellido")
+                Apellido = Console.ReadLine
+                Nombre_Completo = Nombre + Apellido
+                Console.WriteLine("datos cargados: " & Nombre_Completo & "el programa procederá a cerrarse")
+                variable = 4
+                'Console.WriteLine("desea salir?")
+                'variable = Console.ReadLine
+            ElseIf variable = 4Then
+            Console.WriteLine("fin del programa")
             End If
-            Console.WriteLine("Opcion 4")
-
         Loop
-
     End Sub
 End Module
