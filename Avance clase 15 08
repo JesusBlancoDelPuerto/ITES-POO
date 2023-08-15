@@ -1,0 +1,33 @@
+Module Program
+    Sub Main(args As String())
+        Dim variable As Integer
+        Dim Nombre As String
+        Dim Apellido As String
+        Dim Nombre_Completo
+        Console.WriteLine("Menú")
+
+        Console.WriteLine("Presione 1 para ingresar datos")
+        Console.WriteLine("Presione 2 para ")
+        Console.WriteLine("Presione 4 para salir")
+        variable = Console.ReadLine
+        Do Until variable = 4
+            If variable = 1 Then
+                Console.WriteLine("Ingrese su Nombre y luego su apellido")
+                Nombre = Console.ReadLine
+                Apellido = Console.ReadLine
+                Nombre_Completo = Nombre + "_" + Apellido
+                Console.WriteLine("Su nombre es:" & Nombre_Completo & "?")
+                Console.WriteLine("Y/N?")
+                If variable = "Y" Then
+                    variable = 4
+                End If
+                If variable = "N" Then
+                    variable = 1
+                End If
+
+
+            End If
+        Loop
+
+    End Sub
+End Module
